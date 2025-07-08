@@ -4,7 +4,7 @@
 
 This guide sets up **certificate‑based automation** for managing **classic Exchange Online distribution lists (DLs)** using **Azure Automation**, a **PowerShell 7 runbook**, and a **webhook**.
 
-The runbook now relies on a single `$WebhookData` parameter (auto‑injected by Azure Automation) and extracts `Action`, `DLName`, and `MemberUPNs` from the webhook body.
+The runbook relies on a single `$WebhookData` parameter (auto‑injected by Azure Automation) and extracts `Action`, `DLName`, and `MemberUPNs` from the webhook body.
 
 ---
 
