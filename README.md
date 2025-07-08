@@ -157,6 +157,29 @@ curl -X POST -H "Content-Type: application/json" \
      "https://<webhook-URL>"
 ```
 
+### 🚀 Trigger from **Power Automate**
+
+1. **Create a new flow**  
+   *Type*: **Instant cloud flow** → trigger **Manually trigger a flow** (or any other event).
+
+2. **Add action** → **HTTP**  
+   | Field | Value |
+   |-------|-------|
+   | **Method** | `POST` |
+   | **URI** | *your webhook URL* |
+   | **Headers** | `Content-Type : application/json` |
+   | **Body** | ```json
+{
+  "Action": "Add",
+  "DLName": "team-dl@contoso.com",
+  "MemberUPNs": "user1@contoso.com;user2@contoso.com"
+}
+``` |
+
+3. **Save & Test** the flow.  
+   The HTTP action’s response code should be **202 Accepted** and the runbook job will appear in **Azure Automation → Jobs**.
+
+
 ---
 
 ## 🔐 Best Practices
