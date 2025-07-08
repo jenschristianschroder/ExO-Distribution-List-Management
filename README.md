@@ -168,7 +168,7 @@ curl -X POST -H "Content-Type: application/json" \
    | **Method** | `POST` |
    | **URI** | *your webhook URL* |
    | **Headers** | `Content-Type : application/json` |
-   | **Body** | ```json {  "Action": "Add", "DLName": "team-dl@contoso.com",  "MemberUPNs": "user1@contoso.com;user2@contoso.com"}``` |
+   | **Body** | ``` {  "Action": "Add", "DLName": "team-dl@contoso.com",  "MemberUPNs": "user1@contoso.com;user2@contoso.com"}``` |
 
 3. **Save & Test** the flow.  
    The HTTP action’s response code should be **202 Accepted** and the runbook job will appear in **Azure Automation → Jobs**.
